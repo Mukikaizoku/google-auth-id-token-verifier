@@ -112,5 +112,5 @@ func VerifySignedJWTWithCerts(token string, certs *Certs, allowedAuds []string, 
 		return nil, fmt.Errorf("Wrong aud: %s", claimSet.Aud)
 	}
 
-	return nil, nil
+	return claimSet, nil
 }
